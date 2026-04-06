@@ -1,0 +1,48 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 225px;
+    height: 225px;
+    background: var(--color-white);
+    transform-origin: center center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    z-index: 2;
+    transform: scale(1.1378);
+    box-shadow:
+        var(--shadow-card-hover-primary),
+        var(--shadow-card-hover-secondary);
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favoriteControl {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.card:hover .favoriteControl {
+    opacity: 1;
+}
+
+.card:focus-within .favoriteControl {
+    opacity: 1;
+}
+
+@media (max-width: 860px) {
+    .card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}

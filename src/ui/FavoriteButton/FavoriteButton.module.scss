@@ -1,0 +1,37 @@
+.button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px 4px 5.3px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.button:not(.active) {
+    color: var(--color-heart-hover);
+}
+
+.button svg {
+    width: 40px;
+    height: 36.7px;
+    fill: transparent;
+    stroke: currentcolor;
+    stroke-width: 1.6;
+}
+
+.button:not(.active):hover svg,
+.button:not(.active):focus-visible svg {
+    fill: currentcolor;
+}
+
+.active {
+    color: var(--color-heart-active);
+}
+
+.active svg {
+    fill: currentcolor;
+    stroke: currentcolor;
+}
