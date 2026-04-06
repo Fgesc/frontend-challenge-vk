@@ -35,10 +35,6 @@
     opacity: 1;
 }
 
-.card:focus-within .favoriteControl {
-    opacity: 1;
-}
-
 @media (max-width: 860px) {
     .card {
         width: 100%;
